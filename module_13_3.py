@@ -9,16 +9,15 @@ API_TOKEN = '8178599573:AAEXyUs1WG3Hz56ZtF8t6cVKTu48o9XIiZA'
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
 
+
 @dp.message(CommandStart())
 async def cmd_start(message: Message):
-    await message.answer("Привет, бот готов к работе!")
+    await message.answer("Привет, я бот помогающий твоему здоровью")
+
 
 @dp.message()
-async def all_mesage(message: Message):
-    await message.answer("Play command '\start'")
-
-
-
+async def all_message(message: Message):
+    await message.answer('Нажмите команду /start, чтобы начать общение')
 
 
 async def main():
